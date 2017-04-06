@@ -1,0 +1,145 @@
+<div class="modal fade userFormModal " id="modal-addUser" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+				</button>
+				<h3 class="modal-title" id="modal-register-label">Add User</h3>
+			</div>
+			<div class="modal-body">
+				<form name="addUserForm" ng-submit="addUserProfile(addUserForm)" class="registration-form">
+					<div class="form-group">
+						<label class="sr-only" for="form-first-name">Email</label>
+						<input type="text" name="form-first-name" placeholder="Email" class="form-first-name form-control" id="form-first-name" ng-model="addUserP.email" required>
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="form-last-name">Password</label>
+						<input type="text" name="form-last-name" placeholder="********" class="form-last-name form-control" id="form-last-name" ng-model="addUserP.password" required>
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="form-email">Username</label>
+						<input type="text" name="form-email" placeholder="Username" class="form-email form-control" id="form-email" ng-model="addUserP.username" required>
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="form-email">UerType</label>
+						<input type="text" name="form-email" placeholder="UerType" class="form-email form-control" id="form-email" ng-model="addUserP.userType" required>
+					</div>
+					<button type="submit" ng-disabled="addUserForm.$invalid" class="btn">Add User</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade userFormModal " id="modal-userEdit" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+				</button>
+				<h3 class="modal-title" id="modal-register-label">Edit {{editUserP.username}} Profile</h3>
+			</div>
+			<div class="modal-body">
+				<form name="editUserForm" ng-submit="editUserProfile(editUserForm)" class="registration-form">
+					<div class="form-group">
+						<label class="sr-only" for="form-Email">Email</label>
+						<input type="text" name="form-Email" placeholder="email" class="form-first-name form-control" id="form-first-name" ng-model="editUserP.email" required>
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="form-last-name">Password</label>
+						<input type="text" name="form-last-name" placeholder="********" class="form-last-name form-control" id="form-last-name" ng-model="editUserP.password" required>
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="form-userType">userType</label>
+						<input type="text" name="form-userType" placeholder="Email..." class="form-email form-control" id="form-email" ng-model="editUserP.userType" required>
+					</div>
+					<button type="submit" ng-disabled="editUserForm.$invalid" class="btn">Edit User</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade userFormModal " id="modal-deleteUser" tabindex="-1" role="dialog" aria-labelledby="modal-register-label" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+				</button>
+				<h3 class="modal-title" id="modal-register-label">Delete User</h3>
+			</div>
+			<div class="modal-body">
+				<button type="button" class="btn" style="width:20%;" ng-click="deleteUser(n)">Delete</button>
+				<button type="button" class="btn"style="width:20%; float:right;" ng-click="closeModal()">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper-table">
+	<button type="button" class="btn adduser" aria-hidden="true"  data-toggle="modal" data-target="#modal-addUser">Add user <i class="fa fa-pencil"></i></button>
+	<div class="table-1">
+		<div class="row-table table-header">
+			<div class="table-cell">
+				Username
+			</div>
+			<div class="table-cell">
+				Password
+			</div>
+			<div class="table-cell">
+				email
+			</div>
+			<div class="table-cell">
+				userType
+			</div>
+			<div class="table-cell">
+				isOnline
+			</div>
+			<div class="table-cell">
+				last_login
+			</div>
+			<div class="table-cell">
+				isActive
+			</div>
+			<div class="table-cell">
+							
+			</div>
+			<div class="table-cell">
+							
+			</div>
+		</div>
+		<div class="row-table" ng-repeat="n in usersDetails">
+			<div class="table-cell">
+				{{n.username}}
+			</div>
+			<div class="table-cell">
+				********
+			</div>
+			<div class="table-cell">
+				{{n.email}}
+			</div>
+			<div class="table-cell">
+				{{n.userType | userTypes}}
+			</div>
+			<div class="table-cell">
+				{{n.isOnline}}
+			</div>
+			<div class="table-cell">
+				{{n.last_login}}
+			</div>
+			<div class="table-cell">
+				{{n.isActive}}
+			</div>
+			<div class="table-cell">
+				<i class="fa fa-pencil-square-o" aria-hidden="true"  data-toggle="modal" data-target="#modal-userEdit" ng-click="editUser(n)"></i>
+			</div>
+			<div class="table-cell">
+				<i class="fa fa-trash" aria-hidden="true" data-toggle="modal" data-target="#modal-deleteUser" ng-click="editUser(n)"></i>
+			</div>
+		</div>
+		
+	</div>
+</div>

@@ -1,0 +1,90 @@
+<form class="search-wrapper cf">
+    <input type="text" placeholder="Search User (By MSISDN)" class="form-control" required="">
+    <button type="submit">Search</button>
+</form>
+<div class="dndform">
+    <form id="dnd">   
+        <hr>
+        <label for="c1">
+            <input type="checkbox" id="c1" name="cc" value="dnd"/>
+            Do not disturb
+        </label> 
+        <label for="c2">
+            <input type="checkbox" id="c2" name="cc" />
+            <span></span>
+            Do not campaign
+        </label>   
+        <label for="c3">
+            <input type="checkbox" id="c3" name="cc" />
+            <span></span>
+            Total blacklist
+        </label> 
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table table-bordred table-striped" id="mytable">
+            <thead>
+                <tr>
+                <th>Subscriber ID</th>
+                <th>Service Name</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>sDate</th>
+                <th>eDate</th>
+                <th>Validity</th>
+                <th>suspendedBy</th>
+                <th>Unsubscribe</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+            </table>
+        </div>
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="edit" class="modal fade" id="edit" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                <h4 class="modal-title custom_align" id="Heading">Unsubscribe</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-danger">
+                <span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to unsubscribe this user?
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" type="button"><span class="glyphicon glyphicon-ok-sign"></span>&nbsp;Yes</button> <button class="btn btn-default" data-dismiss="modal" type="button"><span class="glyphicon glyphicon-remove"></span>&nbsp;No</button>
+            </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+        </div>
+
+        <div aria-hidden="true" aria-labelledby="edit" class="modal fade" id="delete" role="dialog" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button aria-hidden="true" class="close" data-dismiss="modal" type="button"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+                <h4 class="modal-title custom_align" id="Heading">Suspend</h4>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-danger">
+                <span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to suspend this user?
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" type="button"><span class="glyphicon glyphicon-ok-sign"></span>&nbsp;Yes</button> <button class="btn btn-default" data-dismiss="modal" type="button"><span class="glyphicon glyphicon-remove"></span>&nbsp;No</button>
+            </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+        </div>
+
+    </div>
+</div>

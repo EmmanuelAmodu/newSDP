@@ -1,0 +1,48 @@
+<nav class="Navigationbar">
+    <ul class="Navigationbar-list">
+        <li class="Navigationbar-item" data-tab="content1"><a href="#" class="Navigationbar-link Navigationbar-link--pink">Subscriber MGMT</a></li>
+        <li class="Navigationbar-item" data-tab="content2"><a href="#" class="Navigationbar-link Navigationbar-link--red">Service MGMT</a></li>
+        <li class="Navigationbar-item" data-tab="content3"><a href="#/contentMan" class="Navigationbar-link Navigationbar-link--green">Content MGMT</a></li>
+        <li class="Navigationbar-item" data-tab="content4"><a href="#/stats" class="Navigationbar-link Navigationbar-link--blue">Stats</a></li>
+        <li class="Navigationbar-item" data-tab="content5"><a href="#/users" class="Navigationbar-link Navigationbar-link--darkorange">User MGMT</a></li>
+    </ul>
+</nav>
+
+<div class="icon messages-i">
+    <span>1</span>
+    <i class="fa fa-envelope-o"></i>
+</div>
+<div class="fullpage">
+	<div class="chat_window">
+	    <div class="top_menu">
+	        <div class="buttons">
+	            <div class="button close"></div>
+	            <div class="button minimize"></div>
+	            <div class="button maximize"></div>
+	        </div>
+	        <div class="title">Messages</div>
+	    </div>
+	    <ul class="messages"></ul>
+	    <div class="bottom_wrapper clearfix">
+	        <div class="message_input_wrapper">
+	            <input class="message_input" placeholder="Type your message here..." />
+	        </div><div class="send_message">
+	            <div class="icon"></div>
+	            <div class="text">Send</div>
+	        </div>
+	    </div>
+	</div>
+	<div class="message_template">
+	    <li class="message">
+	        <div class="avatar"></div>
+	        <div class="text_wrapper">
+	            <div class="text">
+	                .......
+	            </div>
+	        </div>
+	    </li>
+	</div>
+</div>
+<div class="logout">
+	<button class="js-action-logout" ng-click="logout()">Logout</button>
+</div>
