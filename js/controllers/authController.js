@@ -4,7 +4,7 @@ sdpNok360.controller("authController", ['$scope', '$rootScope',  'authentication
         authentication.login($scope.username, $scope.password).then(function(user){
             if(user.userType){
                 $rootScope.user = user;
-                authentication.loadDashBoard('users');
+                authentication.loadDashBoard('subscriberMan');
                 console.log(user);
             } else {
                 $rootScope.user = false;
@@ -20,7 +20,7 @@ sdpNok360.controller("authController", ['$scope', '$rootScope',  'authentication
         
         if(data.userType){
             $rootScope.user = data;
-            authentication.loadDashBoard('users');
+            authentication.loadDashBoard('subscriberMan');
         } 
 
     }, function(err){

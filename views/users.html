@@ -125,13 +125,13 @@
 				{{n.userType | userTypes}}
 			</div>
 			<div class="table-cell">
-				{{n.isOnline}}
+				{{n.isOnline | isOnline}}
 			</div>
 			<div class="table-cell">
 				{{n.last_login}}
 			</div>
 			<div class="table-cell">
-				{{n.isActive}}
+				{{n.isActive | isActive}}
 			</div>
 			<div class="table-cell">
 				<i class="fa fa-pencil-square-o" aria-hidden="true"  data-toggle="modal" data-target="#modal-userEdit" ng-click="editUser(n)"></i>
