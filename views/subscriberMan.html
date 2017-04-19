@@ -1,6 +1,6 @@
 <form class="search-wrapper cf">
-    <input type="text" placeholder="Search User (By MSISDN)" class="form-control" required="">
-    <button type="submit">Search</button>
+    <input type="text" placeholder="Search User (By MSISDN)" class="form-control" ng-model="msisdn" required="">
+    <button type="submit" ng-click="searchUser(msisdn)">Search</button>
 </form>
 <div class="dndform">
     <form id="dnd">   

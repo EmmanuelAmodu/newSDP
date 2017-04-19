@@ -22,6 +22,10 @@ sdpNok360.config(function($routeProvider, $locationProvider){
             templateUrl: "views/subscriberMan.html",
             controller: "subController"
         })
+        .when("/services", {
+            templateUrl: "views/services.html",
+            controller: "serviceController"
+        })
         .otherwise({redirectTo: "/login"});
 });
 

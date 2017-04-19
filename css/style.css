@@ -394,36 +394,36 @@ border-radius: 3px 0 0 3px;
  
 /* Form submit button */
 .search-wrapper button, #dnd [type=submit], .logout .js-action-logout {
-   overflow: visible;
-position: relative;
-float: right;
-border: 0;
-padding: 0;
-cursor: pointer;
-height: 40px;
-width: 72px;
-font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
-color: white;
-text-transform: uppercase;
-background: #D83C3C;
-border-radius: 0 3px 3px 0;
-text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0px 0px 0px 10px;
+    cursor: pointer;
+    height: 40px;
+    width: 72px;
+    font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: white;
+    text-transform: uppercase;
+    background: #D83C3C;
+    border-radius: 0 3px 3px 0;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 }
 .search-wrapper.sub button {
-overflow: visible;
-position: relative;
-float: right;
-border: 0;
-padding: 0;
-cursor: pointer;
-height: 40px;
-width: 100px;
-font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
-color: white;
-text-transform: uppercase;
-background: #D83C3C;
-border-radius: 0 3px 3px 0;
-text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+  overflow: visible;
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 100px;
+  font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  color: white;
+  text-transform: uppercase;
+  background: #D83C3C;
+  border-radius: 0 3px 3px 0;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
 }
    
 .search-wrapper button:hover, .logout .js-action-logout:hover{     

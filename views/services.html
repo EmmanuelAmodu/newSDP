@@ -1,20 +1,35 @@
 <div class="inner contact">
     <div class="contact-form" style="width: 800px; margin: 100px auto;">
-        <form id="contact-us" name="addContentForm" ng-submit="addContent(addContentForm)">
+        <form id="contact-us" name="addContentForm" ng-submit="sendData(addContentForm, formData)">
             <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s">
-                <input type="text" name="mail" id="mail" class="form" placeholder="Date" ng-model="formData.date"/>
-                <select class="form" required="required" ng-model="formData.sevice">
-                    <option class="form" value="1" class="form-control" required="">360U</option>
-                    <option class="form" value="2" class="form-control" required="">Totori</option>
-                    <option class="form" value="3" class="form-control" required="">Wazobia</option>
-                    <option class="form" value="7" class="form-control" required="">Smart Woman</option>
-                    <option class="form" value="8" class="form-control" required="">MBTI Personality</option>
-                    <option class="form" value="9" class="form-control" required="">Money Matter</option>
-                    <option class="form" value="10" class="form-control" required="">Mr and Mrs Better Half</option>
+                <input type="text" class="form" placeholder="service name" ng-model="formData.sname"/>
+                <input type="text" class="form" placeholder="Service Description" ng-model="formData.dsp"/>
+                <input type="text" class="form" placeholder="keyword" ng-model="formData.keyword"/>
+                <select class="form" required="required" ng-model="formData.status">
+                    <option value="" disabled selected>status</option>
+                    <option class="form" value="1" class="form-control" required="">Yes</option>
+                    <option class="form" value="-1" class="form-control" required="">No</option>
                 </select>
             </div>
             <div class="col-xs-6 wow animated slideInRight" data-wow-delay=".5s">
-                <textarea name="message" id="message" class="form textarea"  placeholder="Message" ng-model="formData.text"></textarea>
+                <select class="form" required="required" ng-model="formData.btype">
+                   <option value="" disabled selected>Billing Type</option>
+                    <option class="form" value="1" class="form-control" required="">Sync</option>
+                    <option class="form" value="2" class="form-control" required="">Async</option>
+                    <option class="form" value="3" class="form-control" required="">MT</option>
+                </select>
+                
+                <select class="form" required="required" ng-model="formData.price">
+                    <option value="" disabled selected>Price</option>
+                    <option class="form" value="10" class="form-control" required="">10</option>
+                    <option class="form" value="50" class="form-control" required="">50</option>
+                </select>
+
+                <select class="form" required="required" ng-model="formData.validity">
+                     <option value="" disabled selected>validity</option>
+                    <option class="form" value="1" class="form-control" required="">1 month</option>
+                    <option class="form" value="7" class="form-control" required="">7 days</option>
+                </select>
             </div>
             <div class="relative fullwidth col-xs-12">
                 <button type="submit" id="submit" name="submit" class="form-btn semibold">Submit</button> 
