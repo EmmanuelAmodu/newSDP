@@ -11549,7 +11549,7 @@ function log$1() {
     if (typeof specifier !== "function") specifier = exports.format(specifier);
     if (count === Infinity) return specifier;
     if (count == null) count = 10;
-    var k = Math.max(1, base * count / scale.ticks().length); // TODO fast estimate?
+    var k = Math.max(1, base * count / scale.ticks().length); 
     return function(d) {
       var i = d / pows(Math.round(logs(d)));
       if (i * base < base - 0.5) i *= base;

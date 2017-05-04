@@ -1,5 +1,5 @@
 var sdpNok360 = angular.module('sdpNok360');
-sdpNok360.factory('httpService', function($http, $log, $location) {
+sdpNok360.factory('httpService', function($http, $log) {
     var searchUser = function(msisdn){
         return $http({
             method: 'POST',

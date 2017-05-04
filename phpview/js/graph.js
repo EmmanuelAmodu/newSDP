@@ -114,7 +114,7 @@ var subscribers = function () {
 }
 
 var networks = function () {
-     const data = [40, 50, 80];
+  const data = [40, 50, 80];
   const r = 200;
 
   const color = d3.scaleOrdinal()
